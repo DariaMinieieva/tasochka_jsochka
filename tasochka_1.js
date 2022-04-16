@@ -54,20 +54,13 @@ function methodSei(inpStr) {
     return inpStr[inpStr.length - 1] + methodSei(inpStr.substring(0, inpStr.length - 1))
 }
 
+
 function methodSette(inpStr) {
     if (inpStr.length === 1) {
         return inpStr;
     }
 
-    return inpStr[inpStr.length - 1] + methodSei(inpStr.substring(0, inpStr.length - 1))
-}
-
-function methodOtto(inpStr) {
-    if (inpStr.length === 1) {
-        return inpStr;
-    }
-
-    return methodOtto(inpStr.substring(1)) + inpStr[0];
+    return methodSette(inpStr.substring(1)) + inpStr[0];
 }
 
 console.log(methodUno("hello, world, i hate camel case"));
